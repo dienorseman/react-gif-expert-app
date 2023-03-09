@@ -8,7 +8,6 @@ export const AddCategory = ({ onNewCategory }) => {
   const [search, setSearch] = useState( '' );
   
   const onSubmit = (event) => {
-
     event.preventDefault();
 
     if (search.trim().length <= 1) return; 
@@ -17,7 +16,7 @@ export const AddCategory = ({ onNewCategory }) => {
   };
 
   return (
-    <form onSubmit={(event) => onSubmit(event)}>
+    <form onSubmit={(event) => onSubmit(event)} aria-label='form'>
       <input
         type="text"
         placeholder="Search gifs"
